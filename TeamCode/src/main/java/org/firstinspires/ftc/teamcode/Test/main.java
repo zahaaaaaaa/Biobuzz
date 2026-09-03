@@ -1,4 +1,4 @@
 package org.firstinspires.ftc.teamcode.Test;
 
-public class coidrept {
+public class main {
 }

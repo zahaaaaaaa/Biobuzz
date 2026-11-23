@@ -32,7 +32,7 @@ public class Sensors {
         Globals.third_ball = false; Globals.fourth_ball = false;
     }
 
-    public double getTOF(double distance) {return 0;}
+//    public double getTOF(double distance) {return 0;}
 
 
     //STOPPER -----------------------

@@ -1,5 +1,7 @@
 package org.firstinspires.ftc.teamcode.Valvoasilii.Utils;
 
+import android.nfc.NfcEvent;
+
 import com.bylazar.configurables.annotations.Configurable;
 import com.pedropathing.math.Pose;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
@@ -37,15 +39,33 @@ public class Globals {
     }
     public static Faze faze;
 
+    //Math functions
+
+    public static double getTimeOfFlight(double distance) {
+        return 0;
+    }
+
+    public static double getCalculatedVelocity(double distance) {
+        return 0;
+    }
+
 
     //Pedro Offical goals
-
     public final static Pose center = new Pose(70.75, 70.75);
-    public static double xOffset = 11.5, yOffset = 18;
-    public static Pose leftBlueGoal = center.plus(new Pose(xOffset-3, yOffset));
-    public static Pose leftRedGoal = center.plus(new Pose(-xOffset+1.5, yOffset));
-    public static Pose rightBlueGoal = center.plus(new Pose(xOffset, -yOffset));
-    public static Pose rightRedGoal = center.plus(new Pose(-xOffset-2, -yOffset));
+//    public static double xOffset = 11.5, yOffset = 18;
+//    public static Pose leftBlueGoal = center.plus(new Pose(xOffset-3, yOffset));
+//    public static Pose leftRedGoal = center.plus(new Pose(-xOffset-2, yOffset));
+//    public static Pose rightBlueGoal = center.plus(new Pose(xOffset, -yOffset));
+//    public static Pose rightRedGoal = center.plus(new Pose(-xOffset-2, -yOffset));
+
+    public static double xOffset = 13.2, yOffset = 15.4;
+    public static Pose leftBlueGoal = center.plus(new Pose(xOffset,yOffset));
+    public static Pose rightBlueGoal = center.plus(new Pose(xOffset,-yOffset));
+    public static Pose leftRedGoal = center.plus(new Pose(-xOffset,yOffset));
+    public static Pose rightRedGoal = center.plus(new Pose(xOffset,yOffset));
+
+    //57.60, 55.29 right red goal offsetx -13.15 offsety -15.55
+    //84.03, 86.08 blue left goal offsetx +13.25 offsety 15.25
 
     public static Pose getSelectedGoal(Alliance alliance,Pose currentPose) {
         if (alliance == Alliance.BLUE) {

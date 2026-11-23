@@ -56,7 +56,7 @@ public class Turret {
 
             double ghostX, ghostY;
 
-            double timeToGoal = sensors.getTOF(Globals.virtualDistanceFromGoal);
+            double timeToGoal = Globals.getTimeOfFlight(Globals.virtualDistanceFromGoal);
 
             ghostX = shooterWorldX + (cleanVx * timeToGoal);
             ghostY = shooterWorldY + (cleanVy * timeToGoal);

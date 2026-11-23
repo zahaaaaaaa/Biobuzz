@@ -68,8 +68,6 @@ public class TeleOpRed extends LinearOpMode {
         while (opModeIsActive()) {
             for (LynxModule hub : allHubs) hub.clearBulkCache();
 
-            follower.localizer.update();
-
             if(gamepad1.right_trigger >= 0.25) {
                 Intake.state = Intake.State.Transfer;
                 Shooter.state = Shooter.State.Shoot;

@@ -19,7 +19,7 @@ public class Intake {
     CachingServo flower, dropdown;
     public static double flower_up, flower_down;
     public static double dropdown_up = 0.5, dropdown_down = 0.4;
-    public static double transfer_pow = 0.7, intake_pow = 1.0, pid_pow;
+    public static double transfer_pow = 0.7, intake_pow = 1.0;
 
     public enum State {
         Intake,

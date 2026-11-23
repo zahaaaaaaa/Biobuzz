@@ -58,17 +58,17 @@ public class Shooter {
 
             double staticDistance = Math.hypot(xGoal - shooterWorldX, yGoal - shooterWorldY);
 
-            double timeToGoal = sensors.getTOF(staticDistance);
+            double timeToGoal = Globals.getTimeOfFlight(staticDistance);
 
             double predRobotX = shooterWorldX + (cleanVx * timeToGoal);
             double predRobotY = shooterWorldY + (cleanVy * timeToGoal);
 
             Globals.virtualDistanceFromGoal = Math.hypot(xGoal - predRobotX, yGoal - predRobotY);
-            targetVel = calculateShooterRPM(Globals.virtualDistanceFromGoal);
+            targetVel = getCalculatedVelocity(Globals.virtualDistanceFromGoal);
 
         } else {
             Globals.distanceFromGoal = Math.hypot(xGoal - shooterWorldX,  yGoal - shooterWorldY);
-            targetVel = calculateShooterRPM(Globals.distanceFromGoal);
+            targetVel = getCalculatedVelocity(Globals.distanceFromGoal);
         }
 
         targetVel += Globals.shooterOffset;
@@ -126,7 +126,7 @@ public class Shooter {
 
     }
 
-    public double calculateShooterRPM(double distance) {
+    public double getCalculatedVelocity(double distance) {
         return targetVel;
     }
     public boolean is_shooting() {
